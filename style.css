@@ -21,27 +21,30 @@ main {
     flex-direction: row;
     background-color: white;
     border-radius: 20px;
-    /* width: 50%; */
+    /* width: 50vw; */
+    /* max-width: 700px; */
 }
 
-.image-container {
-    /* max-width: 50%; */
-}
-
-.image-container img {
+.desktop-image {
     display: block;
     /* max-width: 100%;
     max-height: 100%; */
-    width: 300px;
+    /* width: 50%; */
+    max-width: 300px;
+    height: auto;
     /* height: fit-content; */
-    /* object-fit: fill; */
+    object-fit: contain;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
+.mobile-image {
+    display: none;
+}
+
 .card-container {
     /* max-width: 50%; */
-    margin: 30px;
+    margin: 20px 30px;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -51,23 +54,23 @@ main {
 
 .title {
     color: hsl(228, 12%, 48%);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 8px;
 }
 
 .heading {
-    max-width: 240px;
+    max-width: 200px;
     color: hsl(212, 21%, 14%);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "Fraunces", serif;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .description {
-    max-width: 260px;
+    max-width: 250px;
     color: hsl(228, 12%, 48%);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
     line-height: 25px;
 }
@@ -79,7 +82,7 @@ main {
     align-items: center;
     color: hsl(158, 36%, 37%);
     font-family: "Fraunces", serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     gap: 20px;
 }
 
@@ -104,4 +107,43 @@ main {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border: none;
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        flex-direction: column;
+    }
+    .desktop-image {
+        display: none;
+    }
+    body {
+        margin: 25px;
+    }
+    .mobile-image {
+        display: block;
+        max-width: 300px;
+        /* height: auto; */
+        /* height: fit-content; */
+        object-fit: contain;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .card-container {
+        margin: 20px 20px;
+    }
+    .heading {
+        max-width: 250px;
+        color: hsl(212, 21%, 14%);
+        font-size: 1.7rem;
+        font-family: "Fraunces", serif;
+        /* font-weight: 700; */
+    }
+    .description {
+        max-width: 260px;
+        color: hsl(228, 12%, 48%);
+        font-size: 0.8rem;
+        font-family: "Montserrat", sans-serif;
+        line-height: 20px;
+    }
 }

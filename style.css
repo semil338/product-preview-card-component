@@ -108,6 +108,11 @@ main {
     align-items: center;
     gap: 10px;
     border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: hsl(158, 73%, 19%);
 }
 
 @media screen and (max-width: 375px) {

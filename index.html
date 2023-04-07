@@ -16,10 +16,12 @@
 <body>
 
     <main>
-        <img src="images/image-product-desktop.jpg" alt="image" class="desktop-image">
-        <img src="images/image-product-mobile.jpg" alt="image" class="mobile-image">
+        <picture class="product-image">
+            <source media="(min-width:651px)" srcset="images/image-product-desktop.jpg">
+            <img src="images/image-product-mobile.jpg" alt="product-image">
+        </picture>
         <div class="card-container">
-            <p class="title">PERFUME</p>
+            <p class="title">Perfume</p>
             <h1 class="heading">
                 Gabrielle Essence Eau De Parfum
             </h1>
@@ -28,7 +30,7 @@
             </p>
             <p class="price">
                 $149.99
-                <span class="strike-text">$169.99</span>
+                <del class="sr-only">$169.99</del>
             </p>
             <button class="add-to-cart">
                 <img src="images/icon-cart.svg" alt="cart"> Add to Cart
